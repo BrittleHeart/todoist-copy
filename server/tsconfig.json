@@ -2,10 +2,12 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "CommonJS",
+    "types": ["node", "jest"],
     "removeComments": true,
     "noImplicitAny": true,
     "sourceMap": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
+    "rootDir": "./",
     "outDir": "dist/",
     "esModuleInterop": true,
     "strict": true,
@@ -13,12 +15,10 @@
     "emitDecoratorMetadata": true,
     "moduleResolution": "node",
     "paths": {
-      "@/*": [
-        "app/*", 
-        "config/*", 
-        "database/*"
-      ]
+      "@app/*": ["./app/*"],
+      "@database/*": ["./database/*"],
+      "@config/*": ["./config/*"],
+      "@server": ["./server.ts"]
     }
   },
-  "exclude": ["node_modules", "**/*.spec.ts"]
 }

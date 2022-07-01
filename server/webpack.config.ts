@@ -6,15 +6,13 @@ import { resolve } from 'path'
 const { NODE_ENV } = process.env
 /**
  * gets webpack mode depened on current NODE_ENV
- * @param {string} env 
+ * @param {string} env
  * @returns {string}
  */
-function getWebpackMode(env: string): "none" | "development" | "production" | undefined {
-  if(!env)
-    return undefined
+function getWebpackMode(env: string): 'none' | 'development' | 'production' | undefined {
+  if (!env) return undefined
 
-  if(env === 'production')
-    return 'production'
+  if (env === 'production') return 'production'
 
   return 'development'
 }
@@ -41,11 +39,10 @@ const config: Configuration = {
       'node_modules',
     ],
     alias: {
-      '@/*': [
-        resolve(__dirname, 'app'),
-        resolve(__dirname, 'config'),
-        resolve(__dirname, 'database'),
-      ],
+      '@app': [resolve(__dirname, 'app/')],
+      '@database': [resolve(__dirname, 'database/')],
+      '@config': [resolve(__dirname, 'config/')],
+      '@server': [resolve(__dirname, 'server.ts')]
     },
   },
   module: {
