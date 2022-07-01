@@ -1,0 +1,21 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "globals": {
+    "jest": true
+  },
+  "env": {
+    "browser": false,
+    "node": true,
+    "es6": true    
+  },
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  },
+  "extends": ["eslint/recommended"],
+  "rules": {
+    "semi": ["warn", "never"],
+    "quotes": ["warn", "single"]
+  }
+}

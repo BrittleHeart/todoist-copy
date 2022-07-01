@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "removeComments": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "outDir": "dist/",
+    "esModuleInterop": true,
+    "strict": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "paths": {
+      "@/*": [
+        "app/*", 
+        "config/*", 
+        "database/*"
+      ]
+    }
+  },
+  "include": ["app/*", "config/*", "database/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
