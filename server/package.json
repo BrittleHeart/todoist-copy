@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "lint:eslint": "eslint --fix",
     "dev:serve": "concurrently \"npm run dev:watch\" \"nodemon -q dist/debug/server.bundle.js\"",
     "dev:watch": "NODE_ENV=development webpack --watch",
     "dev:compile": "NODE_ENV=development wabpack"

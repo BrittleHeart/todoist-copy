@@ -1,6 +1,6 @@
-import Kernel from "@app/Kernel"
+import Kernel from '@app/Kernel'
 
-console.log('works');
+console.log('works')
 export async function bootstrap() {
   new Kernel().bootstrap()
 }

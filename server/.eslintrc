@@ -1,26 +1,24 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "globals": {
-    "jest": true
-  },
   "env": {
     "browser": false,
     "node": true,
-    "es6": true    
+    "es6": true
+    // "jest/globals": true
   },
   "parserOptions": {
     "ecmaVersion": 2022,
     "sourceType": "module"
   },
-  "extends": ["eslint/recommended"],
+  "extends": ["eslint:recommended"],
   "plugins": [
     "@typescript-eslint",
     "prettier",
     "jest"
   ],
   "rules": {
-    "semi": ["warn", "never"],
-    "quotes": ["warn", "single"]
+    "semi": ["error", "never"],
+    "quotes": ["error", "single"]
   }
 }
