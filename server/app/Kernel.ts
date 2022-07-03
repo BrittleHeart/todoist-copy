@@ -20,18 +20,20 @@ export default class Kernel {
     this.app = new InversifyExpressServer(container)
     this.app = this.app.build()
 
-    const database = new DatabaseServiceProvider(this._config.default)
+    const database = new DatabaseServiceProvider(this._config)
     this._database = database.provide()
 
     globalMiddlewares.handle(this.app)
   }
 
   public async run() {
+    const { port } = this._config.app
+
     // @ts-ignore
-    this.app.listen(3000, () => console.log('Server is listening on http://localhost:3000'))
+    this.app.listen(port, () => console.log('Server is listening on http://localhost:3000'))
   }
 
   private loadConfig() {
-    this._config = require('@config/app')
+    this._config = require('@config/app').default
   }
 }

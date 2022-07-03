@@ -1,4 +1,7 @@
 export default {
+  app: {
+    port: process.env.PORT ?? process.env.DEFAULT_PORT,
+  },
   mysql: {
     host: process.env.DATABASE_HOST ?? 'localhost',
     port: process.env.DATABASE_PORT ?? 3306,

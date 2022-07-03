@@ -2,9 +2,9 @@ import 'reflect-metadata'
 import 'dotenv/config'
 
 import GlobalMiddleware from '@app/http/middlewares/GlobalMiddleware'
+import LoggerServiceProvider from '@app/providers/LoggerServiceProvider'
 import Kernel, { container } from '@app/Kernel'
 import '@app/http/controllers/UserController'
-import LoggerServiceProvider from '@app/providers/LoggerServiceProvider'
 
 export async function bootstrap() {
   container.bind<Kernel>(Kernel).toSelf()

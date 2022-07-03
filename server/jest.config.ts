@@ -88,7 +88,7 @@ export default {
     '^@app/(.*)$': '<rootDir>/app/$1',
     '^@database/(.*)$': '<rootDir>/database/$1',
     '^@config/(.*)$': '<rootDir>/config/$1',
-    "^@server$/": '<rootDir>/server.ts'
+    '^@server$': '<rootDir>/server.ts',
   },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
