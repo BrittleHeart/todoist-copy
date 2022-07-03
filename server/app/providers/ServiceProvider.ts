@@ -1,9 +1,9 @@
 export default abstract class ServiceProvider<T> {
-  protected config: Array<any> | object
+  protected config: Array<object> | object | any
 
-  constructor(config: Array<any> | object) {
+  constructor(config: T) {
     this.config = config
   }
 
-  public abstract provide(): T
+  public abstract provide(): any
 }

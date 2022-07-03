@@ -1,6 +1,6 @@
 import ServiceProvider from './ServiceProvider'
 
-class DummyService extends ServiceProvider<string> {
+class DummyService extends ServiceProvider<object> {
   public provide(): string {
     throw new Error('Method not implemented.')
   }
